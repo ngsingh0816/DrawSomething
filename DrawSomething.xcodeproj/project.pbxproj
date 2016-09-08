@@ -13,6 +13,14 @@
 		280893F61CF1A56F00C5DD2C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280893F41CF1A56F00C5DD2C /* MainMenu.xib */; };
 		280894011CF1A56F00C5DD2C /* DrawSomethingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 280894001CF1A56F00C5DD2C /* DrawSomethingTests.m */; };
 		2808940C1CF1A56F00C5DD2C /* DrawSomethingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2808940B1CF1A56F00C5DD2C /* DrawSomethingUITests.m */; };
+		2808941E1CF1A59100C5DD2C /* client.css in Resources */ = {isa = PBXBuildFile; fileRef = 2808941A1CF1A59100C5DD2C /* client.css */; };
+		2808941F1CF1A59100C5DD2C /* client.html in Resources */ = {isa = PBXBuildFile; fileRef = 2808941B1CF1A59100C5DD2C /* client.html */; };
+		280894201CF1A59100C5DD2C /* client.js in Resources */ = {isa = PBXBuildFile; fileRef = 2808941C1CF1A59100C5DD2C /* client.js */; };
+		280894211CF1A59100C5DD2C /* draw.js in Resources */ = {isa = PBXBuildFile; fileRef = 2808941D1CF1A59100C5DD2C /* draw.js */; };
+		280894261CF1A59C00C5DD2C /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 280894231CF1A59C00C5DD2C /* Game.m */; };
+		280894271CF1A59C00C5DD2C /* Messages.m in Sources */ = {isa = PBXBuildFile; fileRef = 280894251CF1A59C00C5DD2C /* Messages.m */; };
+		2808942B1CF1A5AA00C5DD2C /* Words in Resources */ = {isa = PBXBuildFile; fileRef = 280894291CF1A5AA00C5DD2C /* Words */; };
+		2808942D1CF1A5C600C5DD2C /* CoreWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2808942C1CF1A5C600C5DD2C /* CoreWebSocket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +54,16 @@
 		280894071CF1A56F00C5DD2C /* DrawSomethingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawSomethingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2808940B1CF1A56F00C5DD2C /* DrawSomethingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawSomethingUITests.m; sourceTree = "<group>"; };
 		2808940D1CF1A56F00C5DD2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2808941A1CF1A59100C5DD2C /* client.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = client.css; sourceTree = "<group>"; };
+		2808941B1CF1A59100C5DD2C /* client.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = client.html; sourceTree = "<group>"; };
+		2808941C1CF1A59100C5DD2C /* client.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = client.js; sourceTree = "<group>"; };
+		2808941D1CF1A59100C5DD2C /* draw.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = draw.js; sourceTree = "<group>"; };
+		280894221CF1A59C00C5DD2C /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		280894231CF1A59C00C5DD2C /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		280894241CF1A59C00C5DD2C /* Messages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messages.h; sourceTree = "<group>"; };
+		280894251CF1A59C00C5DD2C /* Messages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Messages.m; sourceTree = "<group>"; };
+		280894291CF1A5AA00C5DD2C /* Words */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Words; sourceTree = "<group>"; };
+		2808942C1CF1A5C600C5DD2C /* CoreWebSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreWebSocket.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2808942D1CF1A5C600C5DD2C /* CoreWebSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +95,7 @@
 		280893E01CF1A56F00C5DD2C = {
 			isa = PBXGroup;
 			children = (
+				2808942C1CF1A5C600C5DD2C /* CoreWebSocket.framework */,
 				280893EB1CF1A56F00C5DD2C /* DrawSomething */,
 				280893FF1CF1A56F00C5DD2C /* DrawSomethingTests */,
 				2808940A1CF1A56F00C5DD2C /* DrawSomethingUITests */,
@@ -96,9 +116,15 @@
 		280893EB1CF1A56F00C5DD2C /* DrawSomething */ = {
 			isa = PBXGroup;
 			children = (
+				280894191CF1A57800C5DD2C /* Client */,
 				280893EC1CF1A56F00C5DD2C /* AppDelegate.h */,
 				280893ED1CF1A56F00C5DD2C /* AppDelegate.m */,
+				280894221CF1A59C00C5DD2C /* Game.h */,
+				280894231CF1A59C00C5DD2C /* Game.m */,
+				280894241CF1A59C00C5DD2C /* Messages.h */,
+				280894251CF1A59C00C5DD2C /* Messages.m */,
 				280893F21CF1A56F00C5DD2C /* Assets.xcassets */,
+				280894291CF1A5AA00C5DD2C /* Words */,
 				280893F41CF1A56F00C5DD2C /* MainMenu.xib */,
 				280893F71CF1A56F00C5DD2C /* Info.plist */,
 				280893EF1CF1A56F00C5DD2C /* Supporting Files */,
@@ -130,6 +156,17 @@
 				2808940D1CF1A56F00C5DD2C /* Info.plist */,
 			);
 			path = DrawSomethingUITests;
+			sourceTree = "<group>";
+		};
+		280894191CF1A57800C5DD2C /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				2808941A1CF1A59100C5DD2C /* client.css */,
+				2808941B1CF1A59100C5DD2C /* client.html */,
+				2808941C1CF1A59100C5DD2C /* client.js */,
+				2808941D1CF1A59100C5DD2C /* draw.js */,
+			);
+			name = Client;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,8 +272,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280894211CF1A59100C5DD2C /* draw.js in Resources */,
+				280894201CF1A59100C5DD2C /* client.js in Resources */,
 				280893F31CF1A56F00C5DD2C /* Assets.xcassets in Resources */,
+				2808942B1CF1A5AA00C5DD2C /* Words in Resources */,
+				2808941F1CF1A59100C5DD2C /* client.html in Resources */,
 				280893F61CF1A56F00C5DD2C /* MainMenu.xib in Resources */,
+				2808941E1CF1A59100C5DD2C /* client.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +303,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280894261CF1A59C00C5DD2C /* Game.m in Sources */,
+				280894271CF1A59C00C5DD2C /* Messages.m in Sources */,
 				280893F11CF1A56F00C5DD2C /* main.m in Sources */,
 				280893EE1CF1A56F00C5DD2C /* AppDelegate.m in Sources */,
 			);
@@ -393,6 +437,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = DrawSomething/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NeilSingh.DrawSomething;
@@ -405,6 +453,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = DrawSomething/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NeilSingh.DrawSomething;

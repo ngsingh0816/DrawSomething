@@ -1,0 +1,80 @@
+<html>
+	
+<head>
+	<link rel="stylesheet" type="text/css" href="client.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Arvo">
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+<!-- <script>
+	var serverIP = "127.0.0.1";
+	<?php echo "serverIP = \"" + $_GET["ip"] + "\";"; ?>
+</script> -->
+<script src="client.js"></script>
+<script src="draw.js"></script>
+
+<body onload="Load();">
+	<div style="border-style:solid; border-width:2px;">
+	<div align="center" style="height:95%;">
+		
+		<!-- For name table -->
+		<div id="MemberDiv">
+			<table id="MemberTable" style="width:100%;" >
+			</table>
+		</div>
+		
+		<!-- For drawing info / colors -->
+		<div id="RightDiv">
+			<div style="top:0px; width:100%; height:20%; border-bottom:1px solid;">
+				<p style="text-align:center; font-size:24px;" id="Time">Time - 90</p>
+				<p style="text-align:cetner; font-size:16px;"id="Word">Word</p>
+			</div>
+			<div style="bottom:0px; width:100%; height:80%">
+				</br>
+				<button class="SelectionButton" style="background-image:url(Images/pencil_small.png)" id="PencilTool" onclick="ChoosePencil()"></button>
+				<button class="SelectionButton" style="background-image:url(Images/Line.png)" id="LineTool" onclick="ChooseLine()"></button>
+				<button class="SelectionButton" style="background-image:url(Images/Rect.png)" id="RectTool" onclick="ChooseRect()"></button>
+				<button class="SelectionButton" style="background-image:url(Images/Oval.png)" id="OvalTool" onclick="ChooseOval()"></button>
+				<button class="SelectionButton" style="background-image:url(Images/eraser_small.png)" id="EraseTool" onclick="ChooseEraser()"></button>
+				</br>
+				</br>
+				
+				<!-- Colors -->
+				<div id="ColorsDiv" align="center" style="width:75%;">
+				</div>
+				
+				<!-- Size -->
+				<input type="range" min="1" max="20" step="1" value="3" onchange=SizeChange(this.value)
+					style="width:75%; margin-top:10px;" align="center" >
+				
+				<!-- Clear -->
+				<button onclick="ClearCanvasMessage()">Clear</button>
+			</div>
+		</div>
+		
+		<!-- For chat / drawing canvas -->
+		<div style="float:none; height:100%; width:70%;">
+			<!-- Chat -->
+			<div style="top:0px;height:25%">
+				<div id="Chat"></div>
+				<form autocomplete="off" onsubmit="SendMessage(); return false;">
+					<input type="text" id="MessageText" placeholder="Send message"></input>
+				</form>
+			</div>
+			
+			<!-- Drawing canvas (3px for left and 1px for top are so it can't erase the borders) -->
+			<div style="bottom:0px; height:75%; position:relative; border-top:1px solid">
+				<canvas id="Canvas" width="100" height="100" style=
+					"position:absolute; left: 1px; top: 1px; z-index:0; cursor:none;"></canvas>
+				<canvas id="Effects" width="100" height="100" style=
+					"position:absolute; left: 1px; top: 1px; z-index:1; cursor:none;"></canvas>
+			</div>
+		<div>
+		
+	</div>
+		
+	</div>
+			
+</body>
+
+</html>
